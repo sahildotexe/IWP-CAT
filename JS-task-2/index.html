@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Task-2</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="res">
+      <tr>
+        <th>Number</th>
+        <th>Square</th>
+        <th>Cube</th>
+      </tr>
+    </table>
+    <script>
+      var a = prompt("Enter range");
+      var min = parseInt(a.split("-")[0]);
+      var max = parseInt(a.split("-")[1]);
+
+      //Display number, square and cube of number in table
+      if (max < 10) {
+        for (var i = min; i <= max; i++) {
+          var table = document.getElementById("res");
+          table.innerHTML +=
+            "<tr><td>" +
+            i +
+            "</td><td>" +
+            i * i +
+            "</td><td>" +
+            i * i * i +
+            "</td></tr>";
+        }
+      } else {
+        alert("Range should be less than 10");
+      }
+    </script>
+  </body>
+</html>
